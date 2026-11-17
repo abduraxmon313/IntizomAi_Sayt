@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>IntizomAI — reja, odat va maqsadlar uchun AI murabbiy | Telegram bot va ilova</title>
+  <meta name="description" content="IntizomAI (Intizom AI) — rejalaringizni odatga aylantiradigan shaxsiy AI murabbiy. Ovozli reja, aqlli eslatmalar, odatlar seriyasi, XP va reyting. Telegram bot va iOS/Android ilova — bitta hisob.">
+  <meta name="keywords" content="IntizomAI, Intizom AI, intizomai, intizom, intizom bot, intizomai bot, reja tuzish, odat kuzatish, AI murabbiy, kundalik reja, maqsad qo'yish, Telegram bot, o'zbekcha ilova, habit tracker, planner">
+  <meta name="author" content="IntizomAI">
+  <meta name="application-name" content="IntizomAI">
+  <meta name="apple-mobile-web-app-title" content="IntizomAI">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#050B1A">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://intizom.app/">
+  <link rel="alternate" hreflang="uz" href="https://intizom.app/">
+  <link rel="alternate" hreflang="x-default" href="https://intizom.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IntizomAI">
+  <meta property="og:locale" content="uz_UZ">
+  <meta property="og:url" content="https://intizom.app/">
+  <meta property="og:title" content="IntizomAI — reja, odat va maqsadlar uchun AI murabbiy">
+  <meta property="og:description" content="Rejangizni ovozli xabar bilan ayting — IntizomAI uni rejaga aylantiradi, vaqtida eslatadi va intizomingizni ball, seriya va reyting bilan kuzatadi.">
+  <meta property="og:image" content="https://intizom.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IntizomAI logotipi va shiori">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IntizomAI — reja, odat va maqsadlar uchun AI murabbiy">
+  <meta name="twitter:description" content="Telegram bot va iOS/Android ilova. Ovozli reja, eslatmalar, odatlar, XP va reyting.">
+  <meta name="twitter:image" content="https://intizom.app/assets/og-image.png">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/fonts/inter-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://intizom.app/#organization",
+        "name": "IntizomAI",
+        "alternateName": ["Intizom AI", "IntizomAi", "intizomai", "Intizom"],
+        "url": "https://intizom.app/",
+        "logo": "https://intizom.app/assets/icon-512.png",
+        "sameAs": ["https://t.me/Intizom_AI", "https://t.me/intizomAi_bot"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://intizom.app/#website",
+        "name": "IntizomAI",
+        "alternateName": ["Intizom AI", "intizomai"],
+        "url": "https://intizom.app/",
+        "inLanguage": "uz",
+        "publisher": { "@id": "https://intizom.app/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "IntizomAI",
+        "alternateName": "Intizom AI",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS, Android, Telegram",
+        "inLanguage": "uz",
+        "description": "Reja, odat va maqsadlar uchun shaxsiy AI murabbiy: ovozli reja, eslatmalar, odatlar seriyasi, XP, yutuqlar va do'stlar reytingi.",
+        "image": "https://intizom.app/assets/icon-512.png",
+        "url": "https://intizom.app/",
+        "publisher": { "@id": "https://intizom.app/#organization" },
+        "offers": [
+          { "@type": "Offer", "name": "Bepul", "price": "0", "priceCurrency": "UZS" },
+          { "@type": "Offer", "name": "Premium — 1 oy", "price": "39900", "priceCurrency": "UZS" },
+          { "@type": "Offer", "name": "Premium — 3 oy", "price": "79900", "priceCurrency": "UZS" },
+          { "@type": "Offer", "name": "Premium — 12 oy", "price": "179900", "priceCurrency": "UZS" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "IntizomAI nima?", "acceptedAnswer": { "@type": "Answer", "text": "IntizomAI — reja, odat va maqsadlaringizni boshqaradigan shaxsiy AI murabbiy. U Telegram bot, Telegram Mini App va iOS/Android ilova ko'rinishida ishlaydi, hammasida hisob bitta." } },
+          { "@type": "Question", "name": "IntizomAI bepulmi?", "acceptedAnswer": { "@type": "Answer", "text": "Ha. Bepul tarifda kuniga 5 tagacha reja, 3 ta AI so'rov, 3 ta maqsad va 3 ta odat mavjud. Premium cheklovlarni olib tashlaydi va oyiga 39 900 so'mdan boshlanadi." } },
+          { "@type": "Question", "name": "Ilovaga qanday kiraman?", "acceptedAnswer": { "@type": "Answer", "text": "Ilovada \"Telegram orqali kirish\" tugmasini bosing. @intizomAi_bot ochiladi, u yerda kirishni tasdiqlaysiz va ilova avtomatik ochiladi. Parol kerak emas." } },
+          { "@type": "Question", "name": "Bot qaysi tillarni tushunadi?", "acceptedAnswer": { "@type": "Answer", "text": "Rejani o'zbek, rus, ingliz yoki turk tilida matn yoki ovozli xabar bilan yozishingiz mumkin. Bot vaqt va sanani o'zi ajratib oladi." } },
+          { "@type": "Question", "name": "Premium qanday olinadi?", "acceptedAnswer": { "@type": "Answer", "text": "Premium to'lovi Telegram bot ichida amalga oshiriladi. Botda Premium bo'limini oching va 1, 3 yoki 12 oylik tarifni tanlang. 5 ta do'stingizni taklif qilsangiz 7 kunlik Premium sovg'a qilinadi." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+    <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/><path d="M6.38 18.7 4 21"/><path d="M17.64 18.67 20 21"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  </svg>
+  <a class="skip" href="#asosiy">Asosiy qismga o'tish</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a class="brand" href="/" aria-label="IntizomAI bosh sahifa">
+        <img src="/assets/mark-96.webp" width="36" height="31" alt="">
+        <span>Intizom<b>AI</b></span>
+      </a>
+      <nav class="nav__links" id="menu" aria-label="Asosiy menyu">
+        <a href="#imkoniyatlar">Imkoniyatlar</a>
+        <a href="#qanday-ishlaydi">Qanday ishlaydi</a>
+        <a href="#bot">Telegram bot</a>
+        <a href="#ilova">Ilova</a>
+        <a href="#narxlar">Narxlar</a>
+        <a href="#savollar">Savollar</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm btn--primary" href="https://t.me/intizomAi_bot" rel="noopener">Botni ochish</a>
+        <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menyuni ochish">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="asosiy">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="glow glow--a" aria-hidden="true"></div>
+      <div class="glow glow--b" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <div class="hero__copy reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Telegram bot · iOS · Android</p>
+          <h1>IntizomAI — rejalaringizni <span class="grad">odatga aylantiradigan</span> AI murabbiy</h1>
+          <p class="lead">Kuningizni ovozli xabar bilan ayting. IntizomAI uni tayyor rejaga aylantiradi, vaqtida eslatadi va har bir bajarilgan ishni ball, seriya va reytingda ko'rsatadi.</p>
+
+          <div class="stores" id="yuklab-olish">
+            <a class="store {{APPSTORE_CLASS}}" href="{{APPSTORE_HREF}}" rel="noopener" aria-label="{{APPSTORE_LABEL}}">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.53c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.78c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+              <span><small>{{APPSTORE_SMALL}}</small>App Store</span>
+            </a>
+            <a class="store {{PLAY_CLASS}}" href="{{PLAY_HREF}}" rel="noopener" aria-label="{{PLAY_LABEL}}">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D4FF" d="M3.6 2.2 13.3 12l-9.7 9.8c-.36-.2-.6-.6-.6-1.1V3.3c0-.5.24-.9.6-1.1z"/><path fill="#0A6CFF" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1.08.62 1.08 1.58 0 2.2l-3.8 2.2z"/><path fill="#3CE0A0" d="M13.3 12 3.6 2.2c.3-.17.7-.18 1.1.05L16.6 8.7 13.3 12z"/><path fill="#FF5C7A" d="M13.3 12l3.3 3.3-11.9 6.45c-.4.23-.8.22-1.1.05L13.3 12z"/></svg>
+              <span><small>{{PLAY_SMALL}}</small>Google Play</span>
+            </a>
+            <a class="store store--tg" href="https://t.me/intizomAi_bot" rel="noopener" aria-label="Telegram botni ochish: @intizomAi_bot">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.94 4.3 18.9 18.65c-.23 1.01-.83 1.26-1.68.78l-4.63-3.41-2.23 2.15c-.25.25-.45.45-.93.45l.33-4.72 8.6-7.77c.37-.33-.08-.52-.58-.19L7.15 12.63l-4.58-1.43c-1-.31-1.01-1 .21-1.48L20.66 2.8c.83-.31 1.56.19 1.28 1.5z"/></svg>
+              <span><small>Hoziroq boshlang</small>Telegram bot</span>
+            </a>
+          </div>
+
+          <ul class="hero__facts" aria-label="Asosiy afzalliklar">
+            <li><b>Bepul</b> boshlash</li>
+            <li><b>4 tilda</b> ovozli reja</li>
+            <li><b>1 hisob</b> — bot va ilova</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="screen">
+              <div class="scr-top">
+                <div>
+                  <p class="scr-hi">Xayrli tong, Aziz</p>
+                  <p class="scr-date">Seshanba, 17-noyabr</p>
+                </div>
+                <span class="scr-streak"><svg class="i"><use href="#i-flame"/></svg> 12</span>
+              </div>
+              <div class="scr-ring">
+                <svg viewBox="0 0 120 120">
+                  <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00D4FF"/><stop offset="1" stop-color="#0A6CFF"/></linearGradient></defs>
+                  <circle cx="60" cy="60" r="50" class="ring-bg"/>
+                  <circle cx="60" cy="60" r="50" class="ring-fg"/>
+                </svg>
+                <div class="scr-ring__val"><b>78</b><span>intizom</span></div>
+              </div>
+              <div class="scr-xp"><span>Daraja 7</span><div class="bar"><i></i></div><span>1 240 XP</span></div>
+              <p class="scr-sec">Bugungi rejalar</p>
+              <ul class="scr-list">
+                <li class="done"><i></i><span>Ertalabki yugurish</span><em>06:30</em></li>
+                <li class="done"><i></i><span>Ingliz tili — 30 daqiqa</span><em>09:00</em></li>
+                <li><i></i><span>Loyiha ustida ishlash</span><em>14:00</em></li>
+                <li><i></i><span>Kitob o'qish — 20 bet</span><em>21:00</em></li>
+              </ul>
+              <div class="scr-tabs"><span class="on">Bugun</span><span>Rejalar</span><span>Odatlar</span><span>Natija</span><span>Murabbiy</span></div>
+            </div>
+          </div>
+          <div class="float float--a"><span class="float__ic ic--cyan"><svg class="i"><use href="#i-mic"/></svg></span><div><b>Ovozli reja</b><small>"Ertaga 7 da sport"</small></div></div>
+          <div class="float float--b"><span class="float__ic ic--gold"><svg class="i"><use href="#i-trophy"/></svg></span><div><b>Yangi yutuq!</b><small>7 kunlik seriya</small></div></div>
+          <div class="float float--c"><span class="float__ic ic--blue"><svg class="i"><use href="#i-alarm"/></svg></span><div><b>Eslatma · 14:00</b><small>Loyiha ustida ishlash</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="imkoniyatlar">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Imkoniyatlar</p>
+          <h2>Intizom uchun kerak bo'lgan hamma narsa bitta joyda</h2>
+          <p class="sub">IntizomAI faqat ro'yxat emas. U sizni kuzatadi, eslatadi, rag'batlantiradi va kerak bo'lsa gaplashadi.</p>
+        </header>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <span class="card__ic ic--cyan"><svg class="i"><use href="#i-mic"/></svg></span>
+            <h3>Ovozli va matnli reja</h3>
+            <p>"Ertaga soat 7 da sport, 9 da ingliz tili" deb ayting. Bot vaqtni, sanani va vazifani o'zi ajratib oladi. O'zbek, rus, ingliz va turk tillarida ishlaydi.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--blue"><svg class="i"><use href="#i-alarm"/></svg></span>
+            <h3>Aqlli eslatmalar</h3>
+            <p>Har bir reja vaqtida eslatiladi. Ertalabki turtki, kun xulosasi, kechki tahlil va seriya uzilay deganda ogohlantirish keladi.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--ember"><svg class="i"><use href="#i-flame"/></svg></span>
+            <h3>Odatlar va seriya</h3>
+            <p>Har kungi odatlarni belgilang, seriyangizni o'stiring. Bir kun o'tkazib yuborsangiz ham "imtiyozli kun" va muzlatish tokenlari seriyani saqlab qoladi.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--violet"><svg class="i"><use href="#i-sparkles"/></svg></span>
+            <h3>AI murabbiy</h3>
+            <p>Kayfiyat, energiya va so'nggi 30 kunlik natijangizga qarab maslahat beradigan murabbiy. Istalgan vaqtda u bilan suhbatlashing.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--green"><svg class="i"><use href="#i-target"/></svg></span>
+            <h3>Oylik va yillik maqsadlar</h3>
+            <p>Katta maqsadni oy va yilga bo'lib qo'ying. Kunlik rejalar maqsadga qanchalik yaqinlashtirayotganini ko'rib boring.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--gold"><svg class="i"><use href="#i-trophy"/></svg></span>
+            <h3>XP, daraja va yutuqlar</h3>
+            <p>Har bir bajarilgan ish XP beradi. Darajangizni oshiring, 15 ta yutuqni oching va "Boshlovchi"dan "Mythic" unvonigacha boring.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--blue"><svg class="i"><use href="#i-chart"/></svg></span>
+            <h3>Intizom balli va statistika</h3>
+            <p>0–100 lik intizom balli, trend grafigi, faollik xaritasi va haftalik kundalik. O'sishingiz raqamlarda ko'rinadi.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--cyan"><svg class="i"><use href="#i-users"/></svg></span>
+            <h3>Do'stlar va reyting</h3>
+            <p>Guruh tuzing, do'stlaringiz kuni qanday o'tganini ko'ring va reytingda bellashing. Birgalikda intizomli bo'lish osonroq.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__ic ic--ember"><svg class="i"><use href="#i-zap"/></svg></span>
+            <h3>Kunlik vazifa</h3>
+            <p>Har kuni yangi kichik missiya. Bajaring, qo'shimcha XP oling va kunni g'alaba bilan yakunlang.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="section section--alt" id="qanday-ishlaydi">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Qanday ishlaydi</p>
+          <h2>Uch qadamda boshlang</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__n">1</span>
+            <h3>Botni oching</h3>
+            <p><a href="https://t.me/intizomAi_bot" rel="noopener">@intizomAi_bot</a> ga kirib <b>/start</b> bosing. Bir daqiqalik tanishuvdan so'ng hisobingiz tayyor.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">2</span>
+            <h3>Rejangizni ayting</h3>
+            <p>Ovozli xabar yuboring yoki yozing. IntizomAI uni vaqtli rejalarga ajratadi, siz faqat tasdiqlaysiz.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">3</span>
+            <h3>Bajaring va o'sing</h3>
+            <p>Eslatma kelganda "Bajarildi" ni bosing. Ball, seriya va daraja o'sib boradi, murabbiy esa kun yakunida xulosa beradi.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- BOT -->
+    <section class="section" id="bot">
+      <div class="wrap split">
+        <div class="split__copy reveal">
+          <p class="eyebrow">Telegram bot</p>
+          <h2>Rejangiz har doim yoningizda — Telegram ichida</h2>
+          <p class="sub">Hech narsa o'rnatish shart emas. Bot sizning shaxsiy yordamchingiz: rejani qabul qiladi, eslatadi va hisobot beradi.</p>
+          <ul class="checks">
+            <li>Ovozli yoki matnli xabardan avtomatik reja</li>
+            <li>Har daqiqalik aniq eslatmalar va "Bajarildi" tugmasi</li>
+            <li>Kunlik xulosa va kechki tahlil</li>
+            <li>Telegram Mini App: halqa, grafik, kalendar va yutuqlar</li>
+            <li>Guruhlarda do'stlar bilan birga kuzatish</li>
+            <li>Premium va to'lovlar shu yerda, bir necha bosishda</li>
+          </ul>
+          <a class="btn btn--primary" href="https://t.me/intizomAi_bot" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.94 4.3 18.9 18.65c-.23 1.01-.83 1.26-1.68.78l-4.63-3.41-2.23 2.15c-.25.25-.45.45-.93.45l.33-4.72 8.6-7.77c.37-.33-.08-.52-.58-.19L7.15 12.63l-4.58-1.43c-1-.31-1.01-1 .21-1.48L20.66 2.8c.83-.31 1.56.19 1.28 1.5z"/></svg>
+            @intizomAi_bot ni ochish
+          </a>
+        </div>
+        <div class="chat reveal" aria-label="Bot bilan suhbat namunasi">
+          <div class="chat__head">
+            <img src="/assets/app-icon.webp" width="40" height="40" alt="" loading="lazy">
+            <div><b>IntizomAI</b><small>bot</small></div>
+          </div>
+          <div class="chat__body">
+            <div class="msg msg--me msg--voice"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>0:06</em></div>
+            <div class="msg msg--me msg--tr">"Ertaga 7 da yugurish, 9 da ingliz tili, kechqurun 9 da kitob o'qish"</div>
+            <div class="msg msg--bot">
+              <b>✅ 3 ta reja qo'shildi — ertaga</b>
+              <span>🏃 06:30–07:30 · Yugurish</span>
+              <span>📘 09:00–09:30 · Ingliz tili</span>
+              <span>📖 21:00–21:30 · Kitob o'qish</span>
+              <span class="muted">Har biridan oldin eslataman.</span>
+            </div>
+            <div class="msg msg--bot">
+              <b>⏰ 09:00 — Ingliz tili</b>
+              <span class="kb"><span>✅ Bajarildi</span><span>⏳ Keyinroq</span></span>
+            </div>
+            <div class="msg msg--bot">
+              <b>🔥 Seriya: 12 kun · +40 XP</b>
+              <span class="muted">Zo'r! Bugun intizom ballingiz 78 ga chiqdi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP -->
+    <section class="section section--alt" id="ilova">
+      <div class="wrap split split--rev">
+        <div class="split__copy reveal">
+          <p class="eyebrow">Mobil ilova</p>
+          <h2>iPhone va Android uchun IntizomAI ilovasi</h2>
+          <p class="sub">Bot bilan bir xil hisob va bir xil ma'lumot. Ilovada hammasi qulayroq: katta ekran, tezkor belgilash va telefon bildirishnomalari.</p>
+          <div class="tabs-list">
+            <div><b>Bugun</b><span>Kun xulosasi, bugungi rejalar, odatlar, kayfiyat va energiya</span></div>
+            <div><b>Rejalar</b><span>Kunlik, oylik va yillik ko'rinish</span></div>
+            <div><b>Odatlar</b><span>Odatlar ro'yxati va seriyalar</span></div>
+            <div><b>Natijalar</b><span>Statistika, yutuqlar, do'stlar va reyting</span></div>
+            <div><b>Murabbiy</b><span>AI bilan suhbat</span></div>
+          </div>
+          <ul class="checks">
+            <li>Parolsiz kirish: Telegram orqali bir bosishda</li>
+            <li>Bildirishnomadan turib "Bajarildi" — ilovani ochmasdan</li>
+            <li>Tungi va kunduzgi rejim</li>
+          </ul>
+          <div class="stores">
+            <a class="store {{APPSTORE_CLASS}}" href="{{APPSTORE_HREF}}" rel="noopener" aria-label="{{APPSTORE_LABEL}}">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.53c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.78c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+              <span><small>{{APPSTORE_SMALL}}</small>App Store</span>
+            </a>
+            <a class="store {{PLAY_CLASS}}" href="{{PLAY_HREF}}" rel="noopener" aria-label="{{PLAY_LABEL}}">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D4FF" d="M3.6 2.2 13.3 12l-9.7 9.8c-.36-.2-.6-.6-.6-1.1V3.3c0-.5.24-.9.6-1.1z"/><path fill="#0A6CFF" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1.08.62 1.08 1.58 0 2.2l-3.8 2.2z"/><path fill="#3CE0A0" d="M13.3 12 3.6 2.2c.3-.17.7-.18 1.1.05L16.6 8.7 13.3 12z"/><path fill="#FF5C7A" d="M13.3 12l3.3 3.3-11.9 6.45c-.4.23-.8.22-1.1.05L13.3 12z"/></svg>
+              <span><small>{{PLAY_SMALL}}</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+        <div class="sync reveal" aria-label="Bitta hisob — uch platforma">
+          <div class="sync__core">
+            <img src="/assets/app-icon.webp" width="112" height="112" alt="IntizomAI ilova belgisi" loading="lazy">
+            <p>Bitta hisob</p>
+          </div>
+          <div class="sync__node sync__node--1"><svg class="i"><use href="#i-chat"/></svg><b>Telegram bot</b><small>Reja, eslatma, to'lov</small></div>
+          <div class="sync__node sync__node--2"><svg class="i"><use href="#i-grid"/></svg><b>Mini App</b><small>Telegram ichida panel</small></div>
+          <div class="sync__node sync__node--3"><svg class="i"><use href="#i-phone"/></svg><b>iOS / Android</b><small>Mobil ilova</small></div>
+          <svg class="sync__lines" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="150"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="narxlar">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Narxlar</p>
+          <h2>Bepul boshlang, tayyor bo'lganda Premium oling</h2>
+          <p class="sub">To'lov Telegram bot ichida xavfsiz amalga oshiriladi. Karta ma'lumotlari bizda saqlanmaydi.</p>
+        </header>
+        <div class="pricing">
+          <article class="plan reveal">
+            <h3>Bepul</h3>
+            <p class="plan__price"><b>0</b> so'm</p>
+            <p class="plan__note">Har doim bepul</p>
+            <ul class="checks checks--sm">
+              <li>Kuniga 5 tagacha reja</li>
+              <li>Kuniga 3 ta AI so'rov</li>
+              <li>3 ta maqsad va 3 ta odat</li>
+              <li>Eslatmalar, XP va seriya</li>
+            </ul>
+            <a class="btn btn--ghost" href="https://t.me/intizomAi_bot" rel="noopener">Bepul boshlash</a>
+          </article>
+          <article class="plan reveal">
+            <h3>Premium · 1 oy</h3>
+            <p class="plan__price"><b>39 900</b> so'm</p>
+            <p class="plan__note">Oyma-oy</p>
+            <ul class="checks checks--sm">
+              <li>Cheksiz rejalar</li>
+              <li>Ko'proq AI murabbiy suhbatlari</li>
+              <li>Cheksiz maqsad va odatlar</li>
+              <li>To'liq statistika</li>
+            </ul>
+            <a class="btn btn--ghost" href="https://t.me/intizomAi_bot?start=premium_1m" rel="noopener">Tanlash</a>
+          </article>
+          <article class="plan plan--hot reveal">
+            <span class="plan__tag">Mashhur · 33% tejaysiz</span>
+            <h3>Premium · 3 oy</h3>
+            <p class="plan__price"><b>79 900</b> so'm</p>
+            <p class="plan__note">≈ 26 630 so'm/oy</p>
+            <ul class="checks checks--sm">
+              <li>Premiumning barcha imkoniyatlari</li>
+              <li>Odat shakllantirish uchun ideal muddat — 90 kun</li>
+              <li>Oylik tarifdan 33% arzon</li>
+            </ul>
+            <a class="btn btn--primary" href="https://t.me/intizomAi_bot?start=premium_3m" rel="noopener">Tanlash</a>
+          </article>
+          <article class="plan reveal">
+            <span class="plan__tag plan__tag--gold">Eng foydali</span>
+            <h3>Premium · 12 oy</h3>
+            <p class="plan__price"><b>179 900</b> so'm</p>
+            <p class="plan__note">≈ 14 990 so'm/oy</p>
+            <ul class="checks checks--sm">
+              <li>Premiumning barcha imkoniyatlari</li>
+              <li>Butun yil uchun bir marta to'lov</li>
+              <li>Yillik maqsadlar uchun</li>
+              <li>Eng past oylik narx</li>
+            </ul>
+            <a class="btn btn--ghost" href="https://t.me/intizomAi_bot?start=premium_12m" rel="noopener">Tanlash</a>
+          </article>
+        </div>
+        <p class="pricing__ref reveal"><svg class="i"><use href="#i-gift"/></svg> 5 ta do'stingizni taklif qiling — <b>7 kunlik Premium</b> sovg'a. Taklif qilingan do'stingiz ham bonus oladi.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="savollar">
+      <div class="wrap wrap--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Savollar</p>
+          <h2>Ko'p beriladigan savollar</h2>
+        </header>
+        <div class="faq">
+          <details class="reveal" open>
+            <summary>IntizomAI nima?</summary>
+            <p>IntizomAI — reja, odat va maqsadlaringizni boshqaradigan shaxsiy AI murabbiy. U Telegram bot, Telegram Mini App va iOS/Android ilova ko'rinishida ishlaydi. Uchalasida hisob bitta, ma'lumotlar avtomatik bir xil bo'ladi.</p>
+          </details>
+          <details class="reveal">
+            <summary>IntizomAI bepulmi?</summary>
+            <p>Ha. Bepul tarifda kuniga 5 tagacha reja, 3 ta AI so'rov, 3 ta maqsad va 3 ta odat bor. Premium cheklovlarni olib tashlaydi va oyiga 39 900 so'mdan boshlanadi.</p>
+          </details>
+          <details class="reveal">
+            <summary>Ilovaga qanday kiraman?</summary>
+            <p>Ilovada "Telegram orqali kirish" tugmasini bosing. @intizomAi_bot ochiladi, u yerda "Ilovaga kirishni tasdiqlash" ni bosasiz va ilova o'zi ochiladi. Parol kerak emas.</p>
+          </details>
+          <details class="reveal">
+            <summary>Bot qaysi tillarni tushunadi?</summary>
+            <p>Rejani o'zbek, rus, ingliz yoki turk tilida yozishingiz yoki ovozli xabar qilib yuborishingiz mumkin. Bot vaqt va sanani o'zi ajratib oladi, javoblar o'zbek tilida keladi.</p>
+          </details>
+          <details class="reveal">
+            <summary>Premium qanday olinadi?</summary>
+            <p>Premium to'lovi Telegram bot ichida amalga oshiriladi. Botda Premium bo'limini oching va 1, 3 yoki 12 oylik tarifni tanlang. 5 ta do'stingizni taklif qilsangiz 7 kunlik Premium sovg'a qilinadi.</p>
+          </details>
+          <details class="reveal">
+            <summary>Ma'lumotlarim xavfsizmi?</summary>
+            <p>Ma'lumotlar HTTPS orqali uzatiladi. To'lov kartasi ma'lumotlari bizda saqlanmaydi. Batafsil: <a href="/privacy">Maxfiylik siyosati</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta__box reveal">
+          <img src="/assets/mark-256.webp" width="96" height="83" alt="" loading="lazy">
+          <h2>Bugundan intizomli bo'ling</h2>
+          <p>Birinchi rejangizni hoziroq ayting. Bir daqiqa yetadi.</p>
+          <div class="cta__btns">
+            <a class="btn btn--primary btn--lg" href="https://t.me/intizomAi_bot" rel="noopener">Telegram botda boshlash</a>
+            <a class="btn btn--ghost btn--lg" href="#yuklab-olish">Ilovani yuklab olish</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <a class="brand" href="/"><img src="/assets/mark-96.webp" width="36" height="31" alt="" loading="lazy"><span>Intizom<b>AI</b></span></a>
+        <p>Reja, odat va maqsadlar uchun shaxsiy AI murabbiy.</p>
+      </div>
+      <nav class="footer__col" aria-label="Mahsulot">
+        <h3>Mahsulot</h3>
+        <a href="#imkoniyatlar">Imkoniyatlar</a>
+        <a href="#narxlar">Narxlar</a>
+        <a href="#savollar">Savollar</a>
+      </nav>
+      <nav class="footer__col" aria-label="Telegram">
+        <h3>Telegram</h3>
+        <a href="https://t.me/intizomAi_bot" rel="noopener">@intizomAi_bot</a>
+        <a href="https://t.me/Intizom_AI" rel="noopener">Kanal: @Intizom_AI</a>
+        <a href="https://t.me/IntizomAI_Admin_bot" rel="noopener">Yordam: @IntizomAI_Admin_bot</a>
+      </nav>
+      <nav class="footer__col" aria-label="Huquqiy">
+        <h3>Huquqiy</h3>
+        <a href="/privacy">Maxfiylik siyosati</a>
+      </nav>
+    </div>
+    <div class="wrap footer__bottom">
+      <p>© <span id="yil">2026</span> IntizomAI. Barcha huquqlar himoyalangan.</p>
+      <a href="#top">Yuqoriga ↑</a>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=1" defer></script>
+</body>
+</html>

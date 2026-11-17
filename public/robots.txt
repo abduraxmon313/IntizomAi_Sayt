@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://intizom.app/sitemap.xml
